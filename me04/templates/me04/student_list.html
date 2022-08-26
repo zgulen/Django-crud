@@ -1,0 +1,12 @@
+{% extends 'me04/base.html' %}
+
+{% block container %}
+<ul>
+    {% for student in student %}
+    <a href="{% url 'detail' student.id %}">
+
+        <li>{{ student.number }} - {{ student.first_name }} {{ student.last_name }}</li>
+    </a>
+    {%endfor%}
+</ul>
+{% endblock container %}
